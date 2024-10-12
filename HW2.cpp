@@ -7,10 +7,10 @@ void MyDisplay() {
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 	glColor3f(1.0, 0.3, 0.3);
-	glRotatef((GLfloat)Day, 0.0, 0.0, 1.0);
+	glRotatef((GLfloat)Day, 0.0, 0.0, 1.0); //z축 기준으로 회전함
 	glutWireSphere(0.2, 20, 16);
 	glPushMatrix();
-		glRotatef(13.5, 0.0, 1.0, 0.0);
+		glRotatef(13.5, 0.0, 1.0, 0.0);  //지구 자전축 틀어진것 구현
 		glTranslatef(0.7, 0.0, 0.0);
 		glRotatef((GLfloat)Time, 0.0, 0.0, 1.0);
 		glColor3f(0.5, 0.6, 0.7);
